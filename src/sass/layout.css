@@ -1,0 +1,43 @@
+.gridContainer {
+  display: grid;
+  grid-row-gap: 0.6em;
+  margin: 0.6em auto;
+  max-width: 1200px; }
+  .gridContainer .gridHeader {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    padding: 1em; }
+    .gridContainer .gridHeader .title {
+      padding: 0.3em 0;
+      align-self: center;
+      margin: 0; }
+  .gridContainer .gridMain {
+    display: grid;
+    grid-row-gap: 0.6em; }
+    .gridContainer .gridMain .addTaskName {
+      display: grid;
+      font-size: 24px;
+      grid-template-columns: 10fr 1fr 1fr;
+      padding: 0.75em; }
+      .gridContainer .gridMain .addTaskName button {
+        width: 95%; }
+        .gridContainer .gridMain .addTaskName button:last-child {
+          margin-left: 5%; }
+    .gridContainer .gridMain .taskContainer {
+      display: grid;
+      padding: 0.75em;
+      grid-template-columns: 1fr 19fr 4fr; }
+      .gridContainer .gridMain .taskContainer .main {
+        align-self: center;
+        min-width: 180px;
+        max-width: 850px;
+        word-wrap: break-word; }
+      .gridContainer .gridMain .taskContainer .menu {
+        min-width: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
+        .gridContainer .gridMain .taskContainer .menu button {
+          width: 47.5%; }
+          .gridContainer .gridMain .taskContainer .menu button:first-child {
+            margin-right: 5%; }

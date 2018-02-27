@@ -1,0 +1,64 @@
+.gridContainer{
+	display: grid;
+	grid-row-gap: 0.6em;
+	margin: 0.6em auto;
+	max-width: 1200px;
+	
+	.gridHeader{
+		display: grid;
+		grid-template-columns: 5fr 1fr;
+		padding: 1em;
+
+		.title{
+			padding: 0.3em 0;
+			align-self: center;
+			margin: 0;
+		}
+	}
+
+	.gridMain{
+		display: grid;
+		grid-row-gap: 0.6em;
+
+		.addTaskName{
+			display: grid;
+			font-size: 24px;
+			grid-template-columns: 10fr 1fr 1fr;
+			padding: 0.75em;
+			
+			button{
+				width: 95%;
+				&:last-child{
+					margin-left: 5%;
+				}
+			}
+		}
+
+		.taskContainer{
+			display: grid;
+			padding: 0.75em;
+			grid-template-columns: 1fr 19fr 4fr;
+
+			.main{
+				align-self: center;
+				min-width: 180px;
+				max-width: 850px;
+				word-wrap: break-word;
+			}
+
+			.menu{
+				min-width: 100px;
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+
+				button{
+					width: 47.5%;
+					&:first-child{
+						margin-right: 5%;
+					}
+				}
+			}
+		}
+	}
+}

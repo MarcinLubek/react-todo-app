@@ -1,0 +1,122 @@
+.gridContainer {
+  display: grid;
+  grid-row-gap: 0.6em;
+  margin: 0.6em auto;
+  max-width: 1200px; }
+  .gridContainer .gridHeader {
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    padding: 1em; }
+    .gridContainer .gridHeader .title {
+      padding: 0.3em 0;
+      align-self: center;
+      margin: 0; }
+  .gridContainer .gridMain {
+    display: grid;
+    grid-row-gap: 0.6em; }
+    .gridContainer .gridMain .addTaskName {
+      display: grid;
+      font-size: 24px;
+      grid-template-columns: 10fr 1fr 1fr;
+      padding: 0.75em; }
+      .gridContainer .gridMain .addTaskName button {
+        width: 95%; }
+        .gridContainer .gridMain .addTaskName button:last-child {
+          margin-left: 5%; }
+    .gridContainer .gridMain .taskContainer {
+      display: grid;
+      padding: 0.75em;
+      grid-template-columns: 1fr 19fr 4fr; }
+      .gridContainer .gridMain .taskContainer .main {
+        align-self: center;
+        min-width: 180px;
+        max-width: 850px;
+        word-wrap: break-word; }
+      .gridContainer .gridMain .taskContainer .menu {
+        min-width: 100px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center; }
+        .gridContainer .gridMain .taskContainer .menu button {
+          width: 47.5%; }
+          .gridContainer .gridMain .taskContainer .menu button:first-child {
+            margin-right: 5%; }
+
+body {
+  background-color: #eee;
+  color: #555;
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 18px; }
+
+button {
+  background-color: inherit;
+  border: 3px solid #ccc;
+  border-radius: 10px;
+  color: #555;
+  outline: none; }
+  button:hover {
+    background-color: #dedede;
+    cursor: pointer; }
+
+.border, .gridContainer .gridHeader, .gridContainer .gridMain .addTaskName, .gridContainer .gridMain .taskContainer {
+  border: 7px solid #ccc;
+  border-radius: 10px; }
+
+.material-icons {
+  font-size: 32px;
+  padding: 0.3em 0; }
+
+.gridContainer .gridMain input[type='text'] {
+  background-color: inherit;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  color: inherit;
+  font-size: inherit;
+  outline: none;
+  width: 98%; }
+
+.gridContainer .gridMain .taskContainer {
+  font-size: 24px; }
+  .gridContainer .gridMain .taskContainer .check {
+    align-self: center;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    margin-right: 10px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .gridContainer .gridMain .taskContainer .check input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer; }
+    .gridContainer .gridMain .taskContainer .check .checkmark {
+      background-color: #eee;
+      border: 3px solid #ccc;
+      border-radius: 5px;
+      display: block;
+      height: 25px;
+      width: 25px; }
+    .gridContainer .gridMain .taskContainer .check:hover input ~ .checkmark {
+      background-color: #c7eec7; }
+    .gridContainer .gridMain .taskContainer .check input:checked ~ .checkmark {
+      background-color: #66b566; }
+    .gridContainer .gridMain .taskContainer .check .checkmark:after {
+      content: "";
+      position: absolute;
+      display: none; }
+    .gridContainer .gridMain .taskContainer .check input:checked ~ .checkmark:after {
+      display: block; }
+    .gridContainer .gridMain .taskContainer .check .checkmark:after {
+      left: 11.5px;
+      top: 7px;
+      width: 5px;
+      height: 10px;
+      border: 1px solid white;
+      border-width: 0 3px 3px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg); }
